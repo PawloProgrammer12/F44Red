@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "842217233288",
+    "firebase_url": "https://f44red-9da71.firebaseio.com",
+    "project_id": "f44red-9da71",
+    "storage_bucket": "f44red-9da71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842217233288:android:bc97f5ddef61a10c",
+        "android_client_info": {
+          "package_name": "com.f44red"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842217233288-pgj7fgfp63jv999japujunjtmcl8dvfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUDE_PcAfI35Pw6HdGBOqZtfLuenFy43I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842217233288-pgj7fgfp63jv999japujunjtmcl8dvfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

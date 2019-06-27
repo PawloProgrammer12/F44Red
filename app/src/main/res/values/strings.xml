@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">F44Red</string>
+
+    <!-- Open & Close navigation drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Bottom menu -->
+    <string name="bottom_sheet_option_about_title">O Aplikacji</string>
+    <string name="bottom_sheet_option_author">Autor: Paweł Turoń</string>
+    <string name="bottom_sheet_option_status">Status aplikacji: Aplikacja wciąż w rozwoju</string>
+    <string name="bottom_sheet_option_versionapp">Wersja: 1.0</string>
+    <string name="bottom_sheet_option_license">Licencja: Aplikacja udostępniona na licencji MIT</string>
+    <string name="title_activity_settings">Ustawienia</string>
+
+    <!-- Preference Titles -->
+    <string name="general">Ogólne</string>
+    <string name="notifications">Powiadomienia</string>
+
+    <!-- Ogólne Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Powiadomienia Preferences -->
+    <string name="notify_title">Włącz/Wyłącz powiadomienia push</string>
+    <string name="notify_summary">Jeśli wyłączysz tę opcję, nie otrzymasz powiadomień</string>
+    <string name="notify_sound_title">Dźwięk powiadomienia</string>
+    <string name="notify_sound_summary">Wybierz dźwięk...</string>
+    <string name="notify_led_title">Kolor diody LED</string>
+    <string name="notify_led_summary">Możesz wybrać kolor diody dla przychodzących powiadomień</string>
+    <string name="notify_vibrations_title">Wibracje</string>
+    <string name="notify_vibrations_summary">Włącz tę opcję, by urządzenie wibrowało przy powiadomieniach</string>
+    <string name="main_title">F44 Red – An Active IT Community</string>
+    <string name="post_detail">Szczegóły postu</string>
+    <string name="about_us">O nas – F44 Red</string>
+    <string name="contact_info">Kontakt – F44 Red</string>
+    <string name="news">Aktualności – F44 Red</string>
+
+</resources>

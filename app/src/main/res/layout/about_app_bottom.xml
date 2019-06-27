@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_8"
+    android:layout_marginTop="@dimen/dp_8"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_bottom_sheet_heading_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:gravity="center"
+        android:text="@string/bottom_sheet_option_about_title"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_bottom_sheet_author"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:backgroundTint="@android:color/white"
+        android:drawablePadding="@dimen/dp_32"
+        android:gravity="start|center_vertical"
+        android:text="@string/bottom_sheet_option_author"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_bottom_sheet_status"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:backgroundTint="@android:color/white"
+        android:drawablePadding="@dimen/dp_32"
+        android:gravity="start|center_vertical"
+        android:text="@string/bottom_sheet_option_status"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_bottom_sheet_versionapp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:backgroundTint="@android:color/white"
+        android:drawablePadding="@dimen/dp_32"
+        android:gravity="start|center_vertical"
+        android:text="@string/bottom_sheet_option_versionapp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_bottom_sheet_license"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:backgroundTint="@android:color/white"
+        android:drawablePadding="@dimen/dp_32"
+        android:gravity="start|center_vertical"
+        android:text="@string/bottom_sheet_option_license"
+        android:textSize="16sp" />
+
+</LinearLayout>
