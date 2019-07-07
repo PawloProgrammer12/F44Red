@@ -38,13 +38,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
      */
     public static class ImageTypeViewHolder extends RecyclerView.ViewHolder {
 
-        TextView title, subtitle;
+        TextView title;
         ImageView imageView;
         public ImageTypeViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.title = (TextView) itemView.findViewById(R.id.title);
-            this.subtitle = (TextView) itemView.findViewById(R.id.subtitle);
             this.imageView = (ImageView) itemView.findViewById(R.id.Icon);
         }
     }
@@ -61,17 +60,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter {
         final Model object = dataSet.get(position);
 
         ((ImageTypeViewHolder) holder).title.setText(object.title);
-        ((ImageTypeViewHolder) holder).subtitle.setText(object.subtitle);
 
         ((ImageTypeViewHolder) holder).title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(mContext, WPPostDetails.class);
-                intent.putExtra("itemPosition", position);
-                mContext.startActivity(intent);
-            }
-        });
-        ((ImageTypeViewHolder) holder).subtitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, WPPostDetails.class);

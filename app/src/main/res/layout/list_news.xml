@@ -1,53 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
+    android:layout_height="250dp"
+    android:orientation="horizontal"
     app:cardElevation="5dp">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/Icon"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="9"
+        android:src="@mipmap/ic_f44red_round" />
+
+    <ImageView
+        android:id="@+id/ImageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/black_gradient" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="TextView"
+        android:textColor="@color/hamburgerWhiteColor"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"/>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_f44red_round"
-            android:id="@+id/Icon"
-            android:layout_margin="5dp"
-            android:layout_weight="9"
-            android:layout_gravity="center_vertical"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_vertical"
-            android:paddingTop="5dp"
-            android:layout_weight="4">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:gravity="left"
-                android:id="@+id/title"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="normal"
-                android:gravity="left"
-                android:id="@+id/subtitle"
-                android:layout_marginBottom="5dp"
-                android:maxLines="5"
-                android:lineSpacingExtra="2dp"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
 </android.support.v7.widget.CardView>

@@ -11,12 +11,11 @@ package com.model;
 
 public class Model {
     public static final int IMAGE_TYPE = 1;
-    public String title, subtitle, image;
+    public String title, image;
     public int type;
 
-    public Model(int mType, String mTitle, String mSubtitle, String mImage){
+    public Model(int mType, String mTitle, String mImage){
         this.title = mTitle;
-        this.subtitle = mSubtitle;
         this.type = mType;
         this.image = mImage;
     }

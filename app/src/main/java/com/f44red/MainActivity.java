@@ -101,15 +101,8 @@ public class MainActivity extends DrawerBaseActivity {
                         Log.e("Main", "Title: " + response.body().get(i).getTitle().getRendered() +
                                 " " + response.body().get(i).getId());
 
-                        String tmpDetails = response.body().get(i).getExcerpt().getRendered().toString();
-                        tmpDetails = tmpDetails.replace("<p>", "");
-                        tmpDetails = tmpDetails.replace("</p>", "");
-                        tmpDetails = tmpDetails.replace("[&hellip;]", "");
-                        tmpDetails = tmpDetails.replace("&#8211;", "");
-                        tmpDetails = tmpDetails.replace("&#x2122;", "");
-
                         list.add(new Model(Model.IMAGE_TYPE, response.body().get(i).getTitle().getRendered(),
-                                tmpDetails, response.body().get(i).getLinks().getWpFeaturedmedia().get(0).getHref()));
+                                response.body().get(i).getLinks().getWpFeaturedmedia().get(0).getHref()));
                     }
                     adapter.notifyDataSetChanged();
                 }
