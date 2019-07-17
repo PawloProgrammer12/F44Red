@@ -23,8 +23,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Main class of F44 Red application. It contains methods for creating view,
@@ -37,7 +35,6 @@ public class MainActivity extends DrawerBaseActivity {
     private LinearLayoutManager mLayoutManager;
     private ArrayList<Model> list;
     private RecyclerViewAdapter adapter;
-    private String baseURL = "http://f44red.com";
     public static List<WPPost> mListPost;
     private SwipeRefreshLayout swipe;
     private long doubleTapClickMilis = 0L;
@@ -84,13 +81,9 @@ public class MainActivity extends DrawerBaseActivity {
 
     protected void getRetrofit() {
         if (InternetConnection.checkInternetConnection(getApplicationContext())) {
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(baseURL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
+            RetrofitArrayApi api = WPClient.getApiService();
 
-            RetrofitArrayApi service = retrofit.create(RetrofitArrayApi.class);
-            Call<List<WPPost>> call = service.getPostInfo();
+            Call<List<WPPost>> call = api.getPostInfo();
             call.enqueue(new Callback<List<WPPost>>() {
                 @Override
                 public void onResponse(Call<List<WPPost>> call, Response<List<WPPost>> response) {
