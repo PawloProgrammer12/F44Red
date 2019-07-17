@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">F44Red</string>
 
     <!-- Open & Close navigation drawer -->
@@ -7,7 +7,7 @@
 
     <!-- Bottom menu -->
     <string name="bottom_sheet_option_about_title">O Aplikacji</string>
-    <string name="bottom_sheet_option_author">Autor: Paweł Turoń</string>
+    <string name="bottom_sheet_option_author" tools:ignore="Typos">Autor: Paweł Turoń</string>
     <string name="bottom_sheet_option_status">Status aplikacji: Aplikacja wciąż w rozwoju</string>
     <string name="bottom_sheet_option_versionapp">Wersja: 1.0</string>
     <string name="bottom_sheet_option_license">Licencja: Aplikacja udostępniona na licencji MIT</string>
@@ -30,10 +30,19 @@
     <string name="notify_led_summary">Możesz wybrać kolor diody dla przychodzących powiadomień</string>
     <string name="notify_vibrations_title">Wibracje</string>
     <string name="notify_vibrations_summary">Włącz tę opcję, by urządzenie wibrowało przy powiadomieniach</string>
+
+    <!-- Tytuły sekcji -->
     <string name="main_title">F44 Red – An Active IT Community</string>
     <string name="post_detail">Szczegóły postu</string>
     <string name="about_us">O nas – F44 Red</string>
     <string name="contact_info">Kontakt – F44 Red</string>
     <string name="news">Aktualności – F44 Red</string>
+    <string name="f44red">F44Red</string>
+    <string name="aboutus">O nas</string>
+    <string name="contact">Kontakt</string>
+    <string name="f44red_app">Aplikacja F44Red</string>
+    <string name="app_settings">Ustawienia</string>
+    <string name="report_issue">Zgłoś błąd</string>
+    <string name="about_app">O aplikacji</string>
 
 </resources>

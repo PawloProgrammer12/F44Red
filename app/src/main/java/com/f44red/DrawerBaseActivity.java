@@ -54,11 +54,6 @@ public class DrawerBaseActivity extends AppCompatActivity {
                         startActivity(i);
                         finish();
                         break;
-                    case R.id.aktualnosci:
-                        i = new Intent(getApplicationContext(), News.class);
-                        startActivity(i);
-                        finish();
-                        break;
                     case R.id.about_us:
                         i = new Intent(getApplicationContext(), AboutUs.class);
                         startActivity(i);
@@ -97,7 +92,7 @@ public class DrawerBaseActivity extends AppCompatActivity {
     protected void showDialogReportIssue(){
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("Zgłoś błąd aplikacji");
-        dialog.setMessage("Jeśli doświadczasz nieprawidłowego działania aplikacji, proszę zgłaszać usterki pod adresem: xxx");
+        dialog.setMessage("Jeśli doświadczasz nieprawidłowego działania aplikacji, proszę zgłaszać usterki pod adresem: pawel.turon1@gmail.com");
         dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
