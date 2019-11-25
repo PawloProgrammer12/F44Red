@@ -17,9 +17,10 @@ Below screenshot showing how F44Red app looks:
 
 ## Technologies
 This application is created with Android which contains additional technologies:
-* Retrofit
-* OneSignal
-* Google Services
+* Gradle version: 3.4.1
+* Retrofit version: 2.0.2
+* OneSignal version: 3.7.1
+* Google Services version: 4.1.0
 
 ## Setup
 To run this project, unzip it in Android Studio's default project folder (Android Studio) and then open it in IDE. When Android Studio finishes downloading required libraries, connect your phone with your computer with USB cable and then hit 'Run' option. (or run in emulator).
