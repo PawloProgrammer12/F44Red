@@ -12,6 +12,8 @@ This project was created for faster access to the newest events published on sit
 clicking in the web browser (both desktop and mobile) - all you need to do is just tap on app icon in your phone and you will be 
 up-to-date with the newest posts!
 
+
+
 ## Technologies
 This application is created with Android which contains additional technologies:
 * Retrofit
@@ -19,5 +21,4 @@ This application is created with Android which contains additional technologies:
 * Google Services
 
 ## Setup
-To run this project, unzip it in Android Studio default project folder and then open it in IDE. When Android Studio finishes downloading 
-required libraries, connect your phone with your computer with USB cable and then hit 'Run' option. (or run in emulator).
+To run this project, unzip it in Android Studio's default project folder (Android Studio) and then open it in IDE. When Android Studio finishes downloading required libraries, connect your phone with your computer with USB cable and then hit 'Run' option. (or run in emulator).
