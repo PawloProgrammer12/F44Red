@@ -1,8 +1,6 @@
 package com.f44red;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,27 +12,23 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 /**
- * Post details like title and whole article which is displayed in web page.
+ * News for F44 Red app.
  * @author Paweł Turoń
  */
 
-public class WPPostDetails extends DrawerBaseActivity {
+public class News extends DrawerBaseActivity {
     private WebView webView;
     private SwipeRefreshLayout swipe;
+    private String aboutUsURL = "http://f44red.com/aktualnosci/";
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         FrameLayout contentFrameLayout = (FrameLayout) findViewById(R.id.frame_container);
-        getLayoutInflater().inflate(R.layout.post_details, contentFrameLayout);
+        getLayoutInflater().inflate(R.layout.activity_news, contentFrameLayout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.getMenu().getItem(0).setChecked(true);
-
-        Intent i = getIntent();
-        int position = i.getExtras().getInt("itemPosition");
-
-        Log.e("WpPostDetails", " Title: " + MainActivity.mListPost.get(position).getTitle().getRendered());
+        navigationView.getMenu().getItem(1).setChecked(true);
 
         swipe = (SwipeRefreshLayout) findViewById(R.id.swipe);
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -52,12 +46,9 @@ public class WPPostDetails extends DrawerBaseActivity {
      */
 
     public void loadWebPage(){
-        Intent i = getIntent();
-        int position = i.getExtras().getInt("itemPosition");
-
         webView = (WebView) findViewById(R.id.postWebView);
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl(MainActivity.mListPost.get(position).getLink());
+        webView.loadUrl(aboutUsURL);
         webView.setWebViewClient(new WebViewClient(){
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
                 Toast.makeText(getApplicationContext(), "Brak połączenia z Internetem. Spróbuj później", Toast.LENGTH_SHORT).show();

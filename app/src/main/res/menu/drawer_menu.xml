@@ -5,31 +5,35 @@
         <item
             android:id="@+id/news"
             android:icon="@drawable/ic_f44red_link"
-            android:title="@string/f44red" />
+            android:title="F44Red" />
+        <item
+            android:id="@+id/aktualnosci"
+            android:icon="@drawable/ic_news"
+            android:title="Aktualności" />
         <item
             android:id="@+id/about_us"
             android:icon="@drawable/ic_about_us"
-            android:title="@string/aboutus" />
+            android:title="O nas" />
         <item
             android:id="@+id/contact"
             android:icon="@drawable/ic_contact"
-            android:title="@string/contact" />
+            android:title="Kontakt" />
     </group>
 
-    <item android:title="@string/f44red_app">
+    <item android:title="Aplikacja F44Red">
         <menu>
             <item
                 android:id="@+id/settings"
                 android:icon="@drawable/ic_settings"
-                android:title="@string/app_settings" />
+                android:title="Ustawienia" />
             <item
                 android:id="@+id/errata"
                 android:icon="@drawable/ic_error"
-                android:title="@string/report_issue" />
+                android:title="Zgłoś błąd" />
             <item
                 android:id="@+id/about_app"
                 android:icon="@drawable/ic_info"
-                android:title="@string/about_app" />
+                android:title="O aplikacji" />
         </menu>
     </item>
 

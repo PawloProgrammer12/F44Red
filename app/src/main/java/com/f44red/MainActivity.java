@@ -1,5 +1,6 @@
 package com.f44red;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,7 +16,11 @@ import com.adapter.RecyclerViewAdapter;
 import com.model.Model;
 import com.model.WPPost;
 import com.onesignal.OneSignal;
+import com.services.NotificationService;
 import com.utils.InternetConnection;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +28,8 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * Main class of F44 Red application. It contains methods for creating view,
@@ -35,6 +42,7 @@ public class MainActivity extends DrawerBaseActivity {
     private LinearLayoutManager mLayoutManager;
     private ArrayList<Model> list;
     private RecyclerViewAdapter adapter;
+    public static String baseURL = "http://f44red.com";
     public static List<WPPost> mListPost;
     private SwipeRefreshLayout swipe;
     private long doubleTapClickMilis = 0L;
@@ -81,9 +89,17 @@ public class MainActivity extends DrawerBaseActivity {
 
     protected void getRetrofit() {
         if (InternetConnection.checkInternetConnection(getApplicationContext())) {
-            RetrofitArrayApi api = WPClient.getApiService();
+            // Do background task and to send a notification if there's a new post - NOT WORKING!
+            Intent notificationIntent = new Intent(getApplicationContext(), NotificationService.class);
+            startService(notificationIntent);
 
-            Call<List<WPPost>> call = api.getPostInfo();
+            Retrofit retrofit = new Retrofit.Builder()
+                    .baseUrl(baseURL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+
+            RetrofitArrayApi service = retrofit.create(RetrofitArrayApi.class);
+            Call<List<WPPost>> call = service.getPostInfo();
             call.enqueue(new Callback<List<WPPost>>() {
                 @Override
                 public void onResponse(Call<List<WPPost>> call, Response<List<WPPost>> response) {
@@ -94,15 +110,22 @@ public class MainActivity extends DrawerBaseActivity {
                         Log.e("Main", "Title: " + response.body().get(i).getTitle().getRendered() +
                                 " " + response.body().get(i).getId());
 
-                        list.add(new Model(Model.IMAGE_TYPE, response.body().get(i).getTitle().getRendered(),
-                                response.body().get(i).getLinks().getWpFeaturedmedia().get(0).getHref()));
+                        String tempdetails =
+                                response.body().get(i).getTitle().getRendered().toString();
+                        tempdetails = tempdetails.replace("&#038;", "&");
+                        tempdetails = tempdetails.replace("&#8211;", "–");
+
+                        // getting URL of the Post fetured Image
+                        String image = response.body().get(i).getLinks().getWpFeaturedmedia().get(0).getHref();
+
+                        list.add(new Model(Model.IMAGE_TYPE, tempdetails, image));
                     }
                     adapter.notifyDataSetChanged();
                 }
 
                 @Override
                 public void onFailure(Call<List<WPPost>> call, Throwable t) {
-
+                    System.out.println("Wystąpił błąd");
                 }
             });
         } else {
