@@ -12,7 +12,8 @@ This project was created for faster access to the newest events published on sit
 clicking in the web browser (both desktop and mobile) - all you need to do is just tap on app icon in your phone and you will be 
 up-to-date with the newest posts!
 
-
+Below screenshot showing how F44Red app looks:
+![F44Red Example](./images/f44red.png)
 
 ## Technologies
 This application is created with Android which contains additional technologies:
